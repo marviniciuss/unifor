@@ -1,4 +1,3 @@
 # UNIFOR
-## Subtítulo 
-### Sub-subtítulo
-*Repositório* das **disciplinas ministradas** da Universidade de Fortaleza - UNIFOR
+
+Repositório das disciplinas ministradas da Universidade de Fortaleza - UNIFOR
