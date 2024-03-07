@@ -103,4 +103,34 @@ FIM_ALGORITMO
 
 ```
 
+### Exercício 04
+Represente, em fluxograma e pseudocódigo, um algoritmo que, a partir da idade do candidato(a), determinar se pode ou não tirar a CNH. Caso não atender a restrição de idade, calcular quantos anos faltam para o candidato estar apto.
+#### Fluxograma
+
+```mermaid
+flowchart TD
+A([Início])-->B{{Informe sua idade}}
+B-->C[/idade/]
+C-->D{idade >=18}
+D--SIM-->E{{Vc já pode tirar a CNH}}
+D--NÃO-->F[ano=18-idade]
+F-->G{{Faltam ano para vc poder tirar a CNH}}
+G-->H([Fim])
+E-->H([Fim])
+
+```
+
+```
+ALGORITMO
+DECLARE idade, ano NUMÉRICO 
+ESCREVA “informe sua idade” 
+LEIA idade
+SE idade >= 18
+	ENTÃO
+		ESCREVA "Vc já pode tirar a CNH"
+SENÃO
+	ano = 18-idade
+	ESCREVA “Faltam “,ano 
+FIM_ALGORITMO.
+```
 
