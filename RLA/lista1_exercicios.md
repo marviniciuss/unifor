@@ -34,6 +34,37 @@ SENÃO
 FIM_ALGORITMO.
 ```
 
+### Exercício 02
+Represente, em fluxograma e pseudocódigo, um algoritmo para calcular o novo salário de um funcionário. Sabe-se que os funcionários que recebem atualmente salário de até R$ 500 terão aumento de 20%; os demais terão aumento de 10%
+#### Fluxograma
+
+```mermaid
+flowchart TD
+A([Início])-->B{{Informe o seu salário}}
+B-->C[salario]
+C-->D{salario > 500}
+D--SIM-->E[salario_novo = salario * 110%]
+D--NÃO-->F[salario_novo = salario * 120%]
+E-->G{{salario_novo}}
+F-->G{{salario_novo}}
+G-->H([Fim])
+```
+
+```
+ALGORITMO
+DECLARE salario, salario_novo NUMÉRICO 
+ESCREVA “Digite seu salário” 
+LEIA salario
+SE salario > 500
+	ENTÃO
+		salario_novo = salario * 110%
+		ESCREVA "salario_novo"
+SENÃO
+	salario_novo = salario * 120%
+	ESCREVA “salario_novo“ 
+FIM_ALGORITMO.
+```
+
 ### Exercício 3
 
 3) Represente, em fluxograma e pseudocódigo, um algoritmo para determinar se um número inteiro e positivo é par ou impar.
