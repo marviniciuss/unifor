@@ -25,3 +25,16 @@ ESCREVA " A média é: ",M
 FIM
 
 ```
+
+### Exercício 2
+
+Leia uma temperatura dada na escala Celsius (C) e imprima o equivalente em Fahrenheit (F). (Fórmula de conversão: F = (9/5) * C + 32)
+
+```mermaid
+flowchart TD
+A([INÍCIO])-->B{{Informe a temperatura em Celsius}}
+B-->C[/TC, TF/]
+C-->D["TF = (9/5) * TC + 32"]
+D-->E{{A temperatura em Fahrenheit é TF}}
+E-->F([FIM])
+```
