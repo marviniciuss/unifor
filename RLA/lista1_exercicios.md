@@ -4,6 +4,36 @@
 
 ## Lista de exercícios
 
+
+### Exercício 01
+Represente, em fluxograma e pseudocódigo, um algoritmo para calcular a média aritmética entre duas notas de um aluno e mostrar sua situação, que pode ser aprovado ou reprovado;
+#### Fluxograma
+
+```mermaid
+flowchart TD
+A([Início])-->B{{Informe as duas notas}}
+B-->C[/N1, N2/]
+C-->D[Média = N1/2 + N2/2]
+D-->E{Média >= 7}
+E--SIM-->F{{Aprovado}}
+E--NÃO-->G{{Reprovado}}
+F-->H([Fim])
+G-->H([Fim])
+```
+
+```
+ALGORITMO
+DECLARE N1, N2, M NUMÉRICO 
+ESCREVA “Digite as duas notas” 
+LEIA N1, N2 
+M = (N1+N2)/2
+SE M >= 7
+	ENTÃO ESCREVA “Aprovado” 
+SENÃO  
+	ESCREVA “Reprovado“ 
+FIM_ALGORITMO.
+```
+
 ### Exercício 3
 
 3) Represente, em fluxograma e pseudocódigo, um algoritmo para determinar se um número inteiro e positivo é par ou impar.
@@ -25,7 +55,7 @@ H-->J([FIM])
 I-->J([FIM])
 ```
 ```
-ALGORITIMO verifica_par_ímpar
+ALGORITMO verifica_par_ímpar
 DECLARE numero, resto INTEIRO
 ESCREVA "Digite um número: "
 LEIA numero, resto
