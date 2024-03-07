@@ -41,7 +41,7 @@ Represente, em fluxograma e pseudocódigo, um algoritmo para calcular o novo sal
 ```mermaid
 flowchart TD
 A([Início])-->B{{Informe o seu salário}}
-B-->C[salario]
+B-->C[/salario/]
 C-->D{salario > 500}
 D--SIM-->E[salario_novo = salario * 110%]
 D--NÃO-->F[salario_novo = salario * 120%]
