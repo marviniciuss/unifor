@@ -93,3 +93,41 @@ CC = 1.57 * CF
 ESCREVA "O  custo ao consumidor é: ",CC
 FIM
 ```
+
+
+
+Algoritmo calcularContaFinal
+    // Declaração de variáveis
+    quantidadeHamburguer, quantidadeCheeseburger, quantidadeFritas, quantidadeRefrigerante, quantidadeMilkshake: inteiro
+    precoHamburguer, precoCheeseburger, precoFritas, precoRefrigerante, precoMilkshake: real
+    total: real
+    
+    // Definição dos preços dos itens
+    precoHamburguer <- 3.00
+    precoCheeseburger <- 2.50
+    precoFritas <- 2.50
+    precoRefrigerante <- 1.00
+    precoMilkshake <- 3.00
+    
+    // Entrada de dados
+    Escrever("Quantidade de Hambúrgueres consumidos: ")
+    Ler(quantidadeHamburguer)
+    
+    Escrever("Quantidade de Cheeseburgers consumidos: ")
+    Ler(quantidadeCheeseburger)
+    
+    Escrever("Quantidade de Fritas consumidas: ")
+    Ler(quantidadeFritas)
+    
+    Escrever("Quantidade de Refrigerantes consumidos: ")
+    Ler(quantidadeRefrigerante)
+    
+    Escrever("Quantidade de Milkshakes consumidos: ")
+    Ler(quantidadeMilkshake)
+    
+    // Calcula o total da conta
+    total <- (quantidadeHamburguer * precoHamburguer) + (quantidadeCheeseburger * precoCheeseburger) + (quantidadeFritas * precoFritas) + (quantidadeRefrigerante * precoRefrigerante) + (quantidadeMilkshake * precoMilkshake)
+    
+    // Saída de dados
+    Escrever("Total da conta: R$", total)
+Fim Algoritmo
