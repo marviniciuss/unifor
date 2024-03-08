@@ -38,3 +38,12 @@ C-->D["TF = (9/5) * TC + 32"]
 D-->E{{A temperatura em Fahrenheit é TF}}
 E-->F([FIM])
 ```
+```
+ALGORITMO converter_temperatura
+DECLARE TC, TF: REAL
+ESCREVA "Digite a temperatura em gaus Celsius: "
+LEIA TC
+TF = (9/5) * TC + 32
+ESCREVA "A temperatura em graus Fahrenheit é: ",TF
+FIM
+```
