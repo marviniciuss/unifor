@@ -94,7 +94,29 @@ ESCREVA "O  custo ao consumidor é: ",CC
 FIM
 ```
 
+### Exercício 5
 
+Calcule o quadrado de um número
+
+
+```mermaid
+flowchart TD
+A([INÍCIO])-->B{{Informe um número}}
+B-->C[/numero, numero_quadrado/]
+C-->D["numero_quadrado = numero * numero "] 
+D-->E{{O  quadrado do número informado é: numero_quadrado}}
+E-->F([FIM])
+```
+
+```
+ALGORITMO quadrado_numero
+DECLARE numero, numero_quadrado: REAL
+ESCREVA "Informe um número: "
+LEIA numero
+numero_quadrado = numero * numero
+ESCREVA "O  quadrado do número informado é: ",numero_quadrado
+FIM
+```
 
 Algoritmo calcularContaFinal
     // Declaração de variáveis
