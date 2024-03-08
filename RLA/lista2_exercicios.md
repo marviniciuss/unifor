@@ -47,3 +47,26 @@ TF = (9/5) * TC + 32
 ESCREVA "A temperatura em graus Fahrenheit é: ",TF
 FIM
 ```
+
+### Exercício 3
+
+Leia uma quantidade de chuva dada em polegadas e imprima o equivalente em milímetros (25,4 mm = 1 polegada)
+
+```mermaid
+flowchart TD
+A([INÍCIO])-->B{{Informe o volume de chuva em polegadas}}
+B-->C[/VP, VM/]
+C-->D["VM = VP * 25,4"]
+D-->E{{O volume de chuva em milímetros é VM}}
+E-->F([FIM])
+```
+
+```
+ALGORITMO converter_volume
+DECLARE VP, VM: REAL
+ESCREVA "Informe o volume de chuva em polegadas: "
+LEIA VP
+VM = VP * 25,4
+ESCREVA "O volume de chuva em milímetros é: ",VM
+FIM
+```
