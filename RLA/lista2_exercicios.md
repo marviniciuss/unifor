@@ -127,7 +127,6 @@ c) Fritas.................... R$ 2,50
 d) Refrigerante ............. R$ 1,00 
 e) Milkshake................. R$ 3,00
 
-
 ```mermaid
 flowchart TD
 A([INÍCIO])-->B{{Informe a quantidade de Hambúrguer: }}
