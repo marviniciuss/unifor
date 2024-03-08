@@ -118,6 +118,58 @@ ESCREVA "O  quadrado do número informado é: ",numero_quadrado
 FIM
 ```
 
+### Exercício 6
+
+O cardápio de uma lanchonete é dado abaixo. Prepare um algoritmo que leia a quantidade de cada item que você consumiu e calcule a conta final. 
+a) Hambúrguer................ R$ 3,00 
+b) Cheeseburger.............. R$ 2,50 
+c) Fritas.................... R$ 2,50 
+d) Refrigerante ............. R$ 1,00 
+e) Milkshake................. R$ 3,00
+
+
+```mermaid
+flowchart TD
+A([INÍCIO])-->B{{Informe a quantidade de Hambúrguer: }}
+B-->C{{Informe a quantidade de Cheeseburger: }}
+C-->D{{Informe a quantidade de Fritas: }}
+D-->E{{Informe a quantidade de Refrigerante: }}
+E-->F{{Informe a quantidade de Milkshake: }}
+F-->G[/quant_chees,quant_hamb,quant_frita,quant_refrig,quant_milk,total_chees,total_hamb,total_frita,total_refrig,total_milk,conta/]
+G-->H["total_chees=quant_chees*2.50
+total_hamb=quant_hamb*3
+total_frita=quant_frita*2.50
+total_refrig=quant_refrig*1
+total_milk=quant_milk*3
+conta=total_chees+total_hamb+total_frita+total_refrig+total_milk"]
+H-->I{{A sua conta final é: conta}}
+I-->J([FIM])
+```
+
+```
+ALGORITMO conta_final
+DECLARE quant_chees,quant_hamb,quant_frita,quant_refrig,quant_milk,total_chees,total_hamb,total_frita,total_refrig,total_milk,conta: REAL
+ESCREVA "Informe a quantidade de Hambúrguer: "
+LEIA quant_hamb
+ESCREVA "Informe a quantidade de Cheeseburger: "
+LEIA quant_chees
+ESCREVA "Informe a quantidade de Fritas: "
+LEIA quant_frita
+ESCREVA "Informe a quantidade de Refrigerante: "
+LEIA quant_refrig
+ESCREVA "Informe a quantidade de Milkshake: "
+LEIA quant_milk
+total_chees=quant_chees*2.50
+total_hamb=quant_hamb*3
+total_frita=quant_frita*2.50
+total_refrig=quant_refrig*1
+total_milk=quant_milk*3
+conta=total_chees+total_hamb+total_frita+total_refrig+total_milk
+ESCREVA "A sua conta final é:",conta
+FIM
+```
+
+
 Algoritmo calcularContaFinal
     // Declaração de variáveis
     quantidadeHamburguer, quantidadeCheeseburger, quantidadeFritas, quantidadeRefrigerante, quantidadeMilkshake: inteiro
