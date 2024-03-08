@@ -70,3 +70,26 @@ VM = VP * 25,4
 ESCREVA "O volume de chuva em milímetros é: ",VM
 FIM
 ```
+### Exercício 4
+
+O custo ao consumidor de um carro novo é a soma do custo de fábrica com a porcentagem do distribuidor e dos impostos, ambos aplicados ao custo de fábrica. Supondo que a porcentagem do distribuidor seja de 12% e a dos impostos de 45%, prepare um algoritmo para ler o custo de fábrica do carro e imprimir o custo ao consumidor
+
+
+```mermaid
+flowchart TD
+A([INÍCIO])-->B{{Informe o custo de fábrica do carro}}
+B-->C[/CF, CC/]
+C-->D["CC = 1.57 * CF "] 
+D-->E{{O  custo ao consumidor é CC}}
+E-->F([FIM])
+```
+
+```
+ALGORITMO custo_carro
+DECLARE CF, CC: REAL
+ESCREVA "Informe o custo de fábrica do carro: "
+LEIA CF
+CC = 1.57 * CF
+ESCREVA "O  custo ao consumidor é: ",CC
+FIM
+```
