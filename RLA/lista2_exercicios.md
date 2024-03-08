@@ -169,38 +169,20 @@ FIM
 ```
 
 
-Algoritmo calcularContaFinal
-    // Declaração de variáveis
-    quantidadeHamburguer, quantidadeCheeseburger, quantidadeFritas, quantidadeRefrigerante, quantidadeMilkshake: inteiro
-    precoHamburguer, precoCheeseburger, precoFritas, precoRefrigerante, precoMilkshake: real
-    total: real
-    
-    // Definição dos preços dos itens
-    precoHamburguer <- 3.00
-    precoCheeseburger <- 2.50
-    precoFritas <- 2.50
-    precoRefrigerante <- 1.00
-    precoMilkshake <- 3.00
-    
-    // Entrada de dados
-    Escrever("Quantidade de Hambúrgueres consumidos: ")
-    Ler(quantidadeHamburguer)
-    
-    Escrever("Quantidade de Cheeseburgers consumidos: ")
-    Ler(quantidadeCheeseburger)
-    
-    Escrever("Quantidade de Fritas consumidas: ")
-    Ler(quantidadeFritas)
-    
-    Escrever("Quantidade de Refrigerantes consumidos: ")
-    Ler(quantidadeRefrigerante)
-    
-    Escrever("Quantidade de Milkshakes consumidos: ")
-    Ler(quantidadeMilkshake)
-    
-    // Calcula o total da conta
-    total <- (quantidadeHamburguer * precoHamburguer) + (quantidadeCheeseburger * precoCheeseburger) + (quantidadeFritas * precoFritas) + (quantidadeRefrigerante * precoRefrigerante) + (quantidadeMilkshake * precoMilkshake)
-    
-    // Saída de dados
-    Escrever("Total da conta: R$", total)
-Fim Algoritmo
+```
+ALGORITMO conta_final
+DECLARE conta=0: REAL 
+		valor[5]={3.00, 2.50, 2.50, 1.00, 3.00}: REAL
+		quantidade[5]: INTEIRO
+INICIO
+ESCREVA "Item 1-Hambúrguer, item 2-Cheeseburger, item 3-Fritas, item 4-Refrigerante, item 5-Milkshake"
+PARA i de 0 até 4 passo 1 
+	ESCREVA "Quantidade de item ", i + 1, " consumidos: " 			
+	LEIA quantidade[i] 
+FIM PARA
+PARA i de 0 até 4 passo 2
+	conta = valor + valor[i]*quantidade[i]
+FIM PARA
+ESCREVA "O valor da final da conta é:", conta
+FIM
+```
