@@ -307,3 +307,41 @@ a = 3.14 * raio * raio
 ESCREVA "Área do círculo é ", a, " e o perímetro é ", p
 FIM
 ```
+### Exercício 11
+
+Faça um programa que receba um número positivo e maior que zero, calcule e mostre:
+a) o número digitado ao quadrado;
+b) o número digitado ao cubo;
+c) a raiz quadrada do número digitado;
+d) a raiz cúbica do número digitado
+
+```mermaid
+flowchart TD
+A([INÍCIO])-->B{{Informe um número: }}
+B-->C[/numero, num_quadrado, num_cubo, raiz_quad, raiz_cub/]
+C-->D{numero > 0}
+D--NÃO-->H{{O número deve ser positivo e maior que zero!}}
+H-->G
+D--SIM-->E["num_quadrado = numero ** 2 
+			num_cubo = numero ** 3
+			raiz_quad = numero ** 1/2
+			raiz_cub = numero ** 1/3"]
+E-->F{{"Quadrado: num_quadrado; Cubo: num_cubo; Raiz quadrada: raiz_quad; Raíz cúbica: raiz_cub"}}
+F-->G([FIM])
+```
+```
+ALGORITMO exponencial
+DECLARE numero, num_quadrado, num_cubo, raiz_quad, raiz_cub: REAL
+ESCREVA "Informe um número: "
+LEIA numero
+SE numero > 0 ENTAO
+	num_quadrado = numero ** 2 
+	num_cubo = numero ** 3
+	raiz_quad = numero ** 1/2
+	raiz_cub = numero ** 1/3
+SENÃO
+	ESCREVA "O número deve ser positivo e maior que zero!"
+FIM_SE
+ESCREVA "Quadrado: ", num_quadrado "Cubo: ", num_cubo "Raiz quadrada: ", raiz_quad "Raíz cúbica: ", raiz_cub
+FIM
+```
