@@ -284,3 +284,26 @@ ESCREVA "Nome: ", nome
 	"E-mail: , email
 FIM
 ```
+### Exercício 10
+
+Calcule e mostre a área e o perímetro de um círculo. Sabe-se que a área = Ⲡ * raio2 e o perímetro = 2 * Ⲡ * raio.
+
+```mermaid
+flowchart TD
+A([INÍCIO])-->B{{Informe o raio do círculo: }}
+B-->C[/raio, p, a /]
+C-->D[p = 2 * 3.14 * raio]
+D-->E[a = 3.14 * raio * raio ]
+E-->F{{"Área: a ; Perímetro: p"}}
+F-->G([FIM])
+```
+```
+ALGORITMO area_circulo
+DECLARE raio, p, a: REAL
+ESCREVA "Informe o raio do círculo: "
+LEIA raio
+p = 2 * 3.14 * raio
+a = 3.14 * raio * raio
+ESCREVA "Área do círculo é ", a, " e o perímetro é ", p
+FIM
+```
