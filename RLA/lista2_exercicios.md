@@ -216,3 +216,31 @@ salario = 500+(50 * nc + 0.05 * vv)
 ESCREVA "O salário do funcionário ", nome, "é :", salario
 FIM
 ```
+### Exercício 8
+
+Calcule a média de um aluno na disciplina de RLA. Para isso solicite o nome do aluno, a nota da prova e a nota qualitativa. Sabe-se que a nota da prova tem peso 2 e a nota qualitativa peso 1. Mostre a média como resultado.
+
+```mermaid
+flowchart TD
+A([INÍCIO])-->B{{Informe seu nome: }}
+B-->C{{Informe a nota da prova: }}
+C-->D{{Informe a nota qualitativa: }}
+D-->E[/nome, media, NP, NQ/]
+E-->F["media = (NP*2 + NQ*1)/3"] 
+F-->G{{A média do aluno é: media}}
+G-->H([FIM])
+```
+```
+ALGORITMO media_ponderada
+DECLARE nome: CARACTERE
+		media, NP, NQ: REAL
+ESCREVA "Informe seu nome: "
+LEIA nome
+ESCREVA "Informe a nota da prova: "
+LEIA NP
+ESCREVA "Informe a nota qualitativa: "
+LEIA NQ
+media = (NP*2 + NQ*1)/3
+ESCREVA "A média do aluno é: ", media
+FIM
+```
