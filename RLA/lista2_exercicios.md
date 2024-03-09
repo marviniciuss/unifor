@@ -244,3 +244,43 @@ media = (NP*2 + NQ*1)/3
 ESCREVA "A média do aluno é: ", media
 FIM
 ```
+### Exercício 9
+
+Suponha que você deseja preencher a seguinte ficha de inscrição de um estudante: nome, matrícula, curso, idade, e-mail. Imprima os dados do usuário como uma ficha preenchida
+
+```mermaid
+flowchart TD
+A([INÍCIO])-->B{{Informe seu nome: }}
+B-->C{{Informe sua matrícula: }}
+C-->D{{Informe seu curso: }}
+D-->E{{Informe sua idade: }}
+E-->F{{Informe seu e-mail: }}
+F-->G[/nome, matricula,curso, idade, email/]
+G-->H{{"Nome: nome
+		Matrícula: matricula
+		Curso: curso
+		Idade: idade
+		E-mail: email"}}
+H-->I([FIM])
+```
+```
+ALGORITMO ficha_inscricao
+DECLARE nome, curso, email: CARACTERE
+		matricula, idade: INTEIRO
+ESCREVA "Informe seu nome: "
+LEIA nome
+ESCREVA "Informe sua matrícula: "
+LEIA matricula
+ESCREVA "Informe seu curso: "
+LEIA curso
+ESCREVA "Informe sua idade: "
+LEIA idade
+ESCREVA "Informe seu e-mail: "
+LEIA email
+ESCREVA "Nome: ", media
+		"Matricula: ", matricula
+		"Curso: ", curso
+		"Idade: ", idade
+		"E-mail: , email
+FIM
+```
