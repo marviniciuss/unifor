@@ -186,3 +186,33 @@ FIM PARA
 ESCREVA "O valor da final da conta é:", conta
 FIM
 ```
+### Exercício 7
+
+Uma companhia de carros paga a seus empregados um salário de R$ 500,00 por mês mais uma comissão de R$ 50,00 para cada carro vendido e mais 5% do valor da venda. Elabore um algoritmo para calcular e imprimir o salário do vendedor num dado mês recebendo como dados de entrada o nome do vendedor, o número de carros vendidos e o valor total das vendas.
+
+```mermaid
+flowchart TD
+A([INÍCIO])-->B{{Informe seu nome: }}
+B-->C{{Informe o número de carros vendidos: }}
+C-->D{{Informe o valor total das vendas: }}
+D-->E[/nome, nc, vv, salario/]
+E-->F["salario = 500+(50 * nc + 0.05 * vv)"] 
+F-->G{{O salário do funcionário é: salario}}
+G-->H([FIM])
+```
+
+```
+ALGORITMO salario_vendas
+DECLARE nome: CARACTERE
+		nc: INTEIRO
+		vv, salario: REAL
+ESCREVA "Informe seu nome: "
+LEIA nome
+ESCREVA "Informe o número de carros vendidos: "
+LEIA nc
+ESCREVA "Informe o valor total das vendas: "
+LEIA vv
+salario = 500+(50 * nc + 0.05 * vv)
+ESCREVA "O salário do funcionário ", nome, "é :", salario
+FIM
+```
