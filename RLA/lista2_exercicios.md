@@ -277,10 +277,10 @@ ESCREVA "Informe sua idade: "
 LEIA idade
 ESCREVA "Informe seu e-mail: "
 LEIA email
-ESCREVA "Nome: ", media
-		"Matricula: ", matricula
-		"Curso: ", curso
-		"Idade: ", idade
-		"E-mail: , email
+ESCREVA "Nome: ", nome
+	"Matricula: ", matricula
+	"Curso: ", curso
+	"Idade: ", idade
+	"E-mail: , email
 FIM
 ```
