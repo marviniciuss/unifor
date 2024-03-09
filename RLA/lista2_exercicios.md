@@ -345,3 +345,59 @@ FIM_SE
 ESCREVA "Quadrado: ", num_quadrado "Cubo: ", num_cubo "Raiz quadrada: ", raiz_quad "Raíz cúbica: ", raiz_cub
 FIM
 ```
+### Exercício 12
+
+Faça um algoritmo que lê três números inteiros e mostra-os em ordem crescente.
+
+```mermaid
+flowchart TD
+A([INÍCIO])-->B{{Informe o primeiro número: }}
+B-->C{{Informe o segundo número: }}
+C-->D{{Informe o terceiro número: }}
+D-->E[/N1, N2, N3, temp/]
+E-->F{N1>N2}
+F--SIM-->G["temp=N1
+			N1=N2
+			N2=temp"]
+F--NAO-->H
+G-->H{N1>N3}
+H--SIM-->I["temp=N1
+			N1=N3
+			N3=temp"]
+H--NÃO-->J
+I-->J{N2>N3}
+J--SIM-->K["temp=N2
+			N2=N3
+			N3=temp"]
+J--NÃO-->L
+K-->L{{"Os números em ordem crescente são: N1, N2 e N3"}}
+L-->M([FIM])
+```
+```
+ALGORITMO ordem_crescente
+VAR N1, N2, N3, temp: INTEIRO
+INICIO
+ESCREVA "Informe o primeiro número: "
+LEIA N1
+ESCREVA "Informe o segundo número: "
+LEIA N2
+ESCREVA "Informe o terceiro número: "
+LEIA N3
+SE N1 > N2 ENTÃO
+	temp=N1
+	N1=N2
+	N2=temp
+FIM_SE
+SE N1 > N3 ENTÃO
+	temp=N1
+	N1=N3
+	N3=temp
+FIM_SE
+SE N2 > N3 ENTÃO
+	temp=N2
+	N2=N3
+	N3=temp
+FIM_SE
+ESCREVA "O números em ordem crescente são: " N1, N2, N3
+FIM
+```
