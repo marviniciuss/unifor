@@ -401,3 +401,38 @@ FIM_SE
 ESCREVA "O números em ordem crescente são: " N1, N2, N3
 FIM
 ```
+### Exercício 13
+
+Elaborar um algoritmo que, dada a idade de um nadador, classificá-lo nas categorias:
+a) infantil A (5 - 7 anos),
+b) infantil, B (8 -10 anos),
+c) juvenil A (11 - 13 anos),
+d) juvenil B (14 -17 anos) e
+e) adulto (maiores que 18 anos).
+SE idade<5 
+Não pode nadar
+SE idade 
+
+```mermaid
+flowchart TD
+A([INÍCIO])-->B{{"Informe a idade do nadador(a): "}}
+B-->C[/idade/]
+C-->D{idade<5}
+D--SIM-->E{{Muito novo para nadar: }}
+D--NÃO-->F{idade>=5 e idade<=7}
+F--SIM-->G{{O nadador está na categoria infantil A: }}
+G-->Q
+F--NÃO-->H{idade>=8 e idade<=10}
+H--SIM-->I{{O nadador está na categoria infantil B: }}
+I-->Q
+H--NÃO-->J{idade>=11 e idade<=13}
+J--SIM-->K{{O nadador está na categoria juvenil A: }}
+K-->Q
+J--NÃO-->L{idade>=14 e idade<=17}
+L--SIM-->M{{O nadador está na categoria juvenil B: }}
+M-->Q
+L--NÃO-->O{idade>=18}
+O--SIM-->P{{O nadador está na categoria adulto : }}
+P-->Q([FIM])
+
+```
