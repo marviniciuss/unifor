@@ -436,3 +436,28 @@ O--SIM-->P{{O nadador está na categoria adulto : }}
 P-->Q([FIM])
 
 ```
+```
+ALGORITMO categoria_nadador
+VAR idade: INTEIRO
+INICIO
+ESCREVA "Informe a idade do nadador(a): "
+LEIA idade
+SE idade<5 ENTÃO
+	ESCREVA "Muito novo para nadar"
+FIM_SE
+SE idade>=5 e idade<=7 ENTÃO
+	ESCREVA "O nadador está na categoria infantil A"
+FIM_SE
+SE idade>=8 e idade<=10 ENTÃO
+	ESCREVA "O nadador está na categoria infantil B"
+FIM_SE
+SE idade>=11 e idade<=13 ENTÃO
+	ESCREVA "O nadador está na categoria juvenil A"
+FIM_SE
+SE idade>=14 e idade<=17 ENTÃO
+	ESCREVA "O nadador está na categoria juvenil B"
+FIM_SE
+SE idade>=18 ENTÃO
+	ESCREVA "O nadador está na categoria adulto"
+FIM
+```
