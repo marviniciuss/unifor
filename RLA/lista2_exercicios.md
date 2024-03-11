@@ -471,7 +471,7 @@ A([INÍCIO])-->B{{"Informe o 1º número inteiro: "}}
 B-->C{{"Informe o 2º número inteiro: "}}
 C-->D{{"Informe o 3º número inteiro: "}}
 D-->E[/N1, N2, N3/]
-E-->F{N1<N2 e N1<N3}
+E-->F{"N1<N2 e N1<N3"}
 F--SIM-->G{{"O menor número é N1"}}
 G-->K
 F--NÃO-->H{N2<N1 e N2<N3}
