@@ -461,3 +461,41 @@ SE idade>=18 ENTÃO
 	ESCREVA "O nadador está na categoria adulto"
 FIM
 ```
+### Exercício 14
+
+Dado três inteiros crie um algoritmo para retornar o menor deles.
+
+```mermaid
+flowchart TD
+A([INÍCIO])-->B{{"Informe o 1º número inteiro: "}}
+B-->C{{"Informe o 2º número inteiro: "}}
+C-->D{{"Informe o 3º número inteiro: "}}
+D-->E[/N1, N2, N3/]
+E-->F{N1<N2 e N1<N3}
+F--SIM-->G{{"O menor número é N1"}}
+G-->K
+F--NÃO-->H{N2<N1 e N2<N3}
+H--SIM-->I{{"O menor número é N2"}}
+I-->K
+H--NÃO-->J{{"O menor número é N3"}}
+J-->K([FIM])
+```
+```
+ALGORITMO numero_menor
+VAR N1, N2, N3: INTEIRO
+INICIO
+ESCREVA "Informe o 1º número inteiro:  "
+LEIA N1
+ESCREVA "Informe o 2º número inteiro:  "
+LEIA N2
+ESCREVA "Informe o 3º número inteiro:  "
+LEIA N3
+SE N1<N2 e N1<N3 ENTÃO
+	ESCREVA "O menor número é N1"
+SENÃO
+	SE N2<N1 e N2<N3 ENTÃO
+		ESCREVA "O menor número é N2"
+	SENÃO
+		ESCREVA "O menor número é N3"
+FIM
+```
