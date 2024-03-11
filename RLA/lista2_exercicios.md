@@ -520,3 +520,33 @@ FIM_SE
 ESCREVA "O menor número é: menor"
 FIM
 ```
+### Exercício 15
+
+Faça um algoritmo para converter um peso expresso em libras para quilogramas (1Kg =
+1Lb * 2.2). Uma vez que o peso não pode ser um número negativo, o nosso programa não
+deve aceitar um número negativo como um peso válido.
+
+```mermaid
+flowchart TD
+A([INÍCIO])-->B{{"Informe um peso em libras: "}}
+B-->C[/peso, peso_kg/]
+C-->D{peso>=0}
+D--SIM-->E[peso_kg=peso*2.2]
+D--NÃO-->F{{"O peso deve ser um valor positivo "}}
+F-->H
+E-->G{{"O peso informado em kg é: peso_kg"}}
+G-->H([FIM])
+```
+```
+ALGORITMO numero_menor
+VAR peso, peso_kg: REAL
+INICIO
+ESCREVA "Informe um peso em libras: "
+LEIA peso
+SE peso>=0 ENTÃO
+	peso_kg=peso*2.2
+	ESCREVA "O peso informado em kg é: ",peso_kg
+SENÃO
+	ESCREVA "O peso deve ser um valor positivo "
+FIM
+```
