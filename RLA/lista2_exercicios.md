@@ -499,3 +499,24 @@ SENÃO
 		ESCREVA "O menor número é N3"
 FIM
 ```
+```
+Alternativa:
+ALGORITMO menor_numero
+VAR N1, N2, N3, menor: INTEIRO
+INICIO
+ESCREVA "Informe o 1º número inteiro:  "
+LEIA N1
+ESCREVA "Informe o 2º número inteiro:  "
+LEIA N2
+ESCREVA "Informe o 3º número inteiro:  "
+LEIA N3
+menor=N1
+SE N2<menor ENTÃO
+menor=N2
+FIM_SE
+SE N3<menor ENTÃO
+menor=N3
+FIM_SE
+ESCREVA "O menor número é: menor"
+FIM
+```
