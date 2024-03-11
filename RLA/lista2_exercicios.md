@@ -550,3 +550,37 @@ SENÃO
 	ESCREVA "O peso deve ser um valor positivo "
 FIM
 ```
+### Exercício 16
+
+Leia uma média e exiba o status de um aluno:
+a) AP se o aluno está aprovado (média final >= 6);
+b) RM se o aluno está reprovado (média final < 3);
+c) PF se o aluno está em prova final (caso contrário).
+
+```mermaid
+flowchart TD
+A([INÍCIO])-->B{{"Informe a sua média: "}}
+B-->C[/media/]
+C-->D{media<3}
+D--SIM-->E{{"O aluno está reprovado."}}
+E-->I
+D--NÃO-->F{media>=6}
+F--SIM-->G{{"O aluno está aprovado!"}}
+G-->I
+F--NÃO-->H{{"O aluno está em prova final"}}
+H-->I([FIM])
+```
+```
+ALGORITMO status_aluno
+VAR media: REAL
+INICIO
+ESCREVA "Informe a sua média: "
+LEIA media
+SE media<3 ENTÃO
+	ESCREVA "O aluno está reprovado."
+SE media>=6 ENTÃO
+	ESCREVA "O aluno está aprovado!"
+SENÃO
+	ESCREVA "O aluno está em prova final"
+FIM
+```
