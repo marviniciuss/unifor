@@ -593,21 +593,43 @@ flowchart TD
 A([INÍCIO])-->B{{"Informe o seu salário: "}}
 B-->C[/salario/]
 C-->E{"salario <=1.499,15"}
-E--SIM-->F{{"Seu salário é: salario"}}
+E--SIM-->F{{"Seu salário líquido é: salario"}}
 E--NÃO-->G{salario >=1.499,16 e salario <=2.246,75}
 G--SIM-->H[salario=salario-salario*0.075]
-H-->O{{"Seu salário é: salario"}}
+H-->O{{"Seu salário líquido é: salario"}}
 G--NÃO-->I{salario>=2.246,76 e salario<=2.995,70}
 I--SIM-->J[salario=salario-salario*0.15]
-J-->P{{"Seu salário é: salario"}}
+J-->P{{"Seu salário líquido é: salario"}}
 I--NÃO-->K{salario >=2.995,71 e salario <=3.743,19}
 K--SIM-->L[salario=salario-salario*0.225]
-L-->Q{{"Seu salário é: salario"}}
+L-->Q{{"Seu salário líquido é: salario"}}
 K--NÃO-->M[salario=salario-salario*0.275]
-M-->R{{"Seu salário é: salario"}}
+M-->R{{"Seu salário líquido é: salario"}}
 F-->N([FIM])
 O-->N
 P-->N
 Q-->N
 R-->N
+```
+```
+ALGORITMO salario_liquido
+VAR salario: REAL
+INICIO
+ESCREVA "Informe o seu salário: "
+LEIA salario
+SE salario <=1.499,15 ENTÃO
+	ESCREVA "Seu salário líquido é: salario"
+SE salario >=1.499,16 e salario <=2.246,75 ENTÃO
+	salario=salario-salario*0.075
+	ESCREVA "Seu salário líquido é: salario"
+SE salario>=2.246,76 e salario<=2.995,70 ENTÃO
+	salario=salario-salario*0.15
+	ESCREVA "Seu salário líquido é: salario"
+SE salario >=2.995,71 e salario <=3.743,19 ENTÃO
+	salario=salario-salario*0.225
+	ESCREVA "Seu salário líquido é: salario"
+SENÃO 
+	salario=salario-salario*0.275
+	ESCREVA "Seu salário líquido é: salario"
+FIM
 ```
