@@ -584,3 +584,30 @@ SENÃO
 	ESCREVA "O aluno está em prova final"
 FIM
 ```
+### Exercício 17
+
+Suponha que saindo da UNIFOR seu primeiro salário será de R$ 5.000,00. O do seu colega que não fez UNIFOR é de R$ 2.500,00. Infelizmente, ambos precisam pagar impostos. Crie um algoritmo para calcular o salário líquido de vocês e de outras pessoas.
+
+```mermaid
+flowchart TD
+A([INÍCIO])-->B{{"Informe o seu salário: "}}
+B-->C[/salario/]
+C-->E{"salario <=1.499,15"}
+E--SIM-->F{{"Seu salário é: salario"}}
+E--NÃO-->G{salario >=1.499,16 e salario <=2.246,75}
+G--SIM-->H[salario=salario-salario*0.075]
+H-->O{{"Seu salário é: salario"}}
+G--NÃO-->I{salario>=2.246,76 e salario<=2.995,70}
+I--SIM-->J[salario=salario-salario*0.15]
+J-->P{{"Seu salário é: salario"}}
+I--NÃO-->K{salario >=2.995,71 e salario <=3.743,19}
+K--SIM-->L[salario=salario-salario*0.225]
+L-->Q{{"Seu salário é: salario"}}
+K--NÃO-->M[salario=salario-salario*0.275]
+M-->R{{"Seu salário é: salario"}}
+F-->N([FIM])
+O-->N
+P-->N
+Q-->N
+R-->N
+```
