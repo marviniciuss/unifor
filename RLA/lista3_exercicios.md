@@ -1,3 +1,4 @@
+
 ### Exercício 1
 
 1) Represente, em fluxograma e pseudocódigo, um algoritmo para determinar se um número inteiro e positivo é par ou impar.
@@ -8,30 +9,31 @@
 flowchart TD
 A([Início])-->B{{Digite um número}}
 B-->C[/Número/]
-C--> D{Número > 0}
-D--NÃO-->E{{O número deve ser positivo!}}
-E-->J([FIM])
-D--SIM-->F[resto = número % 2]
-F --> G{resto == 0}
-G--NÃO-->H{{O número é impar!}}
-G--SIM--> I{{O número é par!}}
-H-->J([FIM])
-I-->J([FIM])
+C--> D{Número < 0}
+D--SIM-->E{{O número deve ser positivo!}}
+E-->B
+D--NÃO-->F{Número>=0}
+F-->G[resto = número % 2]
+G-->H{resto == 0}
+H--NÃO-->I{{O número é impar!}}
+I-->K
+H--SIM-->J{{O número é par!}}
+J-->K([FIM])
 ```
 ```
 ALGORITMO verifica_par_ímpar
 DECLARE numero, resto INTEIRO
-ESCREVA "Digite um número: "
+ESCREVA "Digite um número positivo: "
 LEIA numero, resto
-SE numero > 0 ENTAO
-    resto = numero % 2
+ENQUANTO numero < 0 FAÇA
+    ESCREVA "Digite um número positivo: "
+    LEIA numero
+FIM_ENQUANTO
+resto = numero % 2
     SE resto == 0 ENTAO
        ESCREVA "O número é par"
     SENÃO 
-       ESCREVA "O número é ímpar"
-SENAO 
-    ESCREVA "O número deve ser positivo!"
- 
+       ESCREVA "O número é ímpar" 
 FIM_ALGORITMO
-
 ```
+
