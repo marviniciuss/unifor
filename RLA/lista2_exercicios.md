@@ -633,3 +633,53 @@ SENÃO
 	ESCREVA "Seu salário líquido é: salario"
 FIM
 ```
+### Exercício 17
+
+Converta o critério de avaliação de alunos em escolas brasileiras para o critério utilizado em escolas americanas. Nas escolas brasileiras, a avaliação dos alunos é reportada por uma nota que varia de 0 a 10. Nas escolas americanas, a avaliação dos alunos é baseada em conceitos: A, B, C, D, ou F.
+a) A (9.0 a 10.0);
+b) B (8.0 a 8.9);
+c) C (7.0 a 7.9);
+d) D (5.0 a 6.9), e
+e) F (menor que 5.0)
+
+```mermaid
+flowchart TD
+A([INÍCIO])-->B{{"Informe sua nota: "}}
+B-->C[/nota, conceito/]
+C-->D{nota<5}
+D--SIM-->E["conceito = F"]
+E-->N
+D--NÃO-->F{nota>=5 e nota<=6.9}
+F--SIM-->G["conceito = D"]
+G-->N
+F--NÃO-->H{nota>=7 e nota<=7.9}
+H--SIM-->I["conceito = C"]
+I-->N
+H--NÃO-->J{nota>=8 e nota<=8.9}
+J--SIM-->K["conceito = B"]
+K-->N
+J--NÃO-->L{nota>=9 e nota<=10}
+L-->M["conceito = A"]
+M-->N{{O conceito do aluno é: , conceito}}
+N-->O([FIM])
+```
+```
+ALGORITMO nota_conceito
+VAR nota: REAL
+	conceito: CARACTERE
+INICIO
+ESCREVA "Digite a nota do aluno de 0 a 10: "
+LEIA nota
+SE nota >= 9.0 ENTÃO
+	conceito  =  "A"
+SE nota >= 8.0 E nota < 9.0 ENTÃO
+	conceito  =  "B"
+SE nota >= 7.0 E nota < 8.0 ENTÃO
+	conceito  =  "C"
+SE nota >= 5.0 E nota < 7.0 ENTÃO
+	conceito  =  "D"
+SENÃO 
+	conceito  =  "F"
+ESCREVA "O conceito do aluno é: ", conceito
+FIM
+```
