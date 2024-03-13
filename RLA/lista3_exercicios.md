@@ -50,7 +50,9 @@ Faça um algoritmo que exiba na tela uma contagem de 0 até 30, exibindo apenas 
 flowchart TD
 A([Início])-->B[/i/]
 B-->C[i DE 0 ATÉ 30 PASSO 3]
+C-->E
 C--> D{{"Multiplos de 3: i"}}
+D-->C
 D-->E([FIM])
 
 ```
