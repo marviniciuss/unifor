@@ -129,3 +129,33 @@ PARA i DE 1 ATÉ 100 FAÇA
 FIM_PARA
 FIM	
 ```
+### Exercício 5
+
+Ler o valor de dois números inteiros n e m. Calcular e exibir a soma de todos os números ímpares positivos entre n e m.
+
+#### Fluxograma
+
+```mermaid
+flowchart TD
+A([Início])-->B[/m, n, s=0/]
+B-->C[i DE m ATÉ n]
+C-->D[resto = i % 2]
+D-->E{resto!=0}
+E--NÃO-->C
+E--SIM-->F[s=s+i]
+F-->C
+F-->G{{A soma dos números ímpares no intervalo informado é: , s}}
+G-->H([FIM])
+```
+```
+ALGORITMO soma_impares
+DECLARE m, n, s=0: INTEIRO
+INICIO
+PARA i DE m ATÉ n FAÇA 
+	resto=i%2
+	SE resto!=0 ENTÃO
+		s=s+i
+FIM_PARA
+ESCREVER "A soma dos números ímpares no intervalo informado é: ", s
+FIM	
+```
