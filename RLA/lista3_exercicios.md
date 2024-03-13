@@ -97,3 +97,35 @@ REPITA
 	ESCREVER "O maior número inserido foi: ", maior
 ATÉ N==0
 ```
+### Exercício 4
+
+Faça um algoritmo que conte de 1 a 100 e a cada múltiplo de 10 emita uma mensagem: “Múltiplo de 10”.
+
+#### Fluxograma
+
+```mermaid
+flowchart TD
+A([Início])-->B[/i, resto/]
+B-->C[i DE 1 ATÉ 100]
+C-->D[resto = i % 10]
+D-->E{resto==0}
+E--SIM-->F{{"Múltiplo de 10: " i}}
+F-->C
+E--NÃO-->G{{i}}
+G-->C
+G-->H([FIM])
+F-->H
+```
+```
+ALGORITMO numero_maior
+DECLARE i, resto: INTEIRO
+INICIO
+PARA i DE 1 ATÉ 100 FAÇA 
+	resto=i%10
+	SE resto==0 ENTÃO
+		ESCREVER "Múltiplo de 10: " i 
+	SENAO
+	ESCREVER i
+FIM_PARA
+FIM	
+```
