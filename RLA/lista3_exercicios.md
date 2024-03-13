@@ -64,3 +64,36 @@ PARA I=0 ATÉ 30 FAÇA [PASSO 3]
 	ESCREVA "Multiplos de 3: ",i 
 FIM_ALGORITMO
 ```
+### Exercício 3
+
+Faça um algoritmo que determine o maior entre N números. A condição de parada é a entrada de um valor 0, ou seja, o algoritmo deve ficar calculando o maior até que a entrada seja igual a 0 (ZERO).
+
+#### Fluxograma
+
+```mermaid
+flowchart TD
+A([Início])-->B[/N, maior=0/]
+B-->C{{"Informe um número (digite zero para parar): "}}
+C-->D[/N/]
+D-->E{N>maior}
+E--SIM-->F[maior=N]
+F-->G
+E--NÃO-->G{{"O maior número inserido foi:" maior}}
+G-->H{N==0}
+H--SIM-->I([FIM])
+H--NÃO-->C
+```
+```
+ALGORITMO numero_maior
+DECLARE N, maior: INTEIRO
+INICIO
+maior=0
+REPITA
+	ESCREVA "Informe um número (digite zero para parar): "
+	LEIA N
+	SE N>maior ENTÃO
+		maior=N
+		FIM_SE
+	ESCREVER "O maior número inserido foi: ", maior
+ATÉ N==0
+```
