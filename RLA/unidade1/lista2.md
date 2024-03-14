@@ -55,22 +55,33 @@ Calcule a média de quatro números inteiros dados.
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INÍCIO])-->B{{Informe os 4 números inteiros}}
+B-->C[/N1, N2, N3, N4/]
+C-->D[M=N1+N2+N3+N4/4]
+D-->E{{A média é M}}
+E-->F([FIM])
 ```
-
 #### Pseudocódigo (1.0 ponto)
+```
+ALGORITMO
+DECLARE N1,N2,N3,N4 : INTEIRO
+M : REAL
+INICIO
+ESCREVA "Informe os 4 números inteiros: "
+LEIA N1,N2,N3,N4
+M=(N1+N2+N3+N4)/4
+ESCREVA " A média é: ",M
+FIM
 
 ```
-Algoritmo Media
-FIM_ALGORITMO
-```
-
 #### Teste de mesa (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| N1 | N2 | N3 | N4 | M=(N1+N2+N3+N4)/4 | SAÍDA |
+|      --      |      --      |      --      |      --      |      --      |    --    |
+| 0     | 5       | 1    |  3     |  2.25   |      " A média é: 2.25 "    |
+| 10   | 23        | 7        | 20 | 15  |    " A média é: 15 "       |
+| 8   | 8         | 8        | 8 | 8  |     " A média é: 8 "      |
+
 
 ### Exercício 02 (2.5 pontos)
 Leia uma temperatura dada em Celsius (C) e imprima o equivalente em Fahrenheit (F). (Fórmula de conversão: F = (9/5) * C + 32)
