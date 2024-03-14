@@ -60,16 +60,31 @@ Sabe-se que os funcionários que recebem atualmente salário de até R$ 500 ter�
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([Início])-->B{{Informe o seu salário}}
+B-->C[/salario/]
+C-->D{salario > 500}
+D--SIM-->E[salario_novo = salario * 110%]
+D--NÃO-->F[salario_novo = salario * 120%]
+E-->G{{salario_novo}}
+F-->G{{salario_novo}}
+G-->H([Fim])
 ```
-
 #### Pseudocódigo (1.0 ponto)
 
 ```
-Algoritmo ContaAprovacoes
-FIM_ALGORITMO
+ALGORITMO
+DECLARE salario, salario_novo NUMÉRICO 
+ESCREVA “Digite seu salário” 
+LEIA salario
+SE salario > 500
+	ENTÃO
+		salario_novo = salario * 110%
+		ESCREVA "salario_novo"
+SENÃO
+	salario_novo = salario * 120%
+	ESCREVA “salario_novo“ 
+FIM_ALGORITMO.
 ```
-
 #### Teste de mesa (1.0 ponto)
 
 | nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
