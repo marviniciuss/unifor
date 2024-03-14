@@ -166,7 +166,8 @@ FIM_ALGORITMO.
 
 #### Teste de mesa (1.0 ponto)
 
-| LEIA idade | SE idade >= 18 | ano = 18-idade | SAÍDA | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| LEIA idade | SE idade >= 18 | ano = 18-idade | SAÍDA | 
+|      --      |      --      |      --      |      --      |
+| 15     | F       | 3        |      Faltam 3       |
+| 19     | V       |          |   "Vc já pode tirar a CNH"      |
+| 16     | F       | 2        |      Faltam 2        |
