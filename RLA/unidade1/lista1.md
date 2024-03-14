@@ -87,10 +87,10 @@ FIM_ALGORITMO.
 ```
 #### Teste de mesa (1.0 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| LEIA salario | salario > 500 | salario_novo | ESCREVA “salario_novo“ |
+|      500     |      NÃO      |     600      |      "600"             | 
+|      400     |      NÃO      |     480      |      "480"             | 
+|     1000     |      SIM      |    1100      |      "1100"            | 
 
 ## Exercício 03 (3 pontos)
 Represente, em fluxograma e pseudocódigo, um algoritmo para calcular a média aritmética entre duas notas de um aluno e mostrar sua situação, que pode ser aprovado ou reprovado.
