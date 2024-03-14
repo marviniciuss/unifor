@@ -88,6 +88,7 @@ FIM_ALGORITMO.
 #### Teste de mesa (1.0 ponto)
 
 | LEIA salario | salario > 500 | salario_novo | ESCREVA “salario_novo“ |
+| -- | -- | -- | -- | -- | 
 |      500     |      NÃO      |     600      |      "600"             | 
 |      400     |      NÃO      |     480      |      "480"             | 
 |     1000     |      SIM      |    1100      |      "1100"            | 
