@@ -89,9 +89,9 @@ FIM_ALGORITMO.
 
 | LEIA salario | salario > 500 | salario_novo | ESCREVA “salario_novo“ |
 | -- | -- | -- | -- |
-|      500     |      NÃO      |     600      |      "600"             | 
-|      400     |      NÃO      |     480      |      "480"             | 
-|     1000     |      SIM      |    1100      |      "1100"            | 
+|      500     |      F      |     600      |      "600"             | 
+|      400     |      F      |     480      |      "480"             | 
+|     1000     |      V      |    1100      |      "1100"            | 
 
 ## Exercício 03 (3 pontos)
 Represente, em fluxograma e pseudocódigo, um algoritmo para calcular a média aritmética entre duas notas de um aluno e mostrar sua situação, que pode ser aprovado ou reprovado.
