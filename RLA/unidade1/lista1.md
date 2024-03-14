@@ -139,19 +139,34 @@ Caso não atender a restrição de idade, calcular quantos anos faltam para o ca
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
-```
+A([Início])-->B{{Informe sua idade}}
+B-->C[/idade/]
+C-->D{idade >=18}
+D--SIM-->E{{Vc já pode tirar a CNH}}
+D--NÃO-->F[ano=18-idade]
+F-->G{{Faltam ano para vc poder tirar a CNH}}
+G-->H([Fim])
+E-->H([Fim])
 
+```
 #### Pseudocódigo (1.0 ponto)
-
 ```
-Algoritmo ContaAprovacoes
-FIM_ALGORITMO
+ALGORITMO
+DECLARE idade, ano NUMÉRICO 
+ESCREVA “informe sua idade” 
+LEIA idade
+SE idade >= 18
+	ENTÃO
+		ESCREVA "Vc já pode tirar a CNH"
+SENÃO
+	ano = 18-idade
+	ESCREVA “Faltam “,ano 
+FIM_ALGORITMO.
 ```
 
 #### Teste de mesa (1.0 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
+| LEIA idade | SE idade >= 18 | ano = 18-idade | SAÍDA | nome_coluna5 | 
 |      --      |      --      |      --      |      --      |      --      | 
 | Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
 | verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
