@@ -100,22 +100,36 @@ Represente, em fluxograma e pseudocódigo, um algoritmo para calcular a média a
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([Início])-->B{{Informe as duas notas}}
+B-->C[/N1, N2/]
+C-->D[Média = N1/2 + N2/2]
+D-->E{Média >= 7}
+E--SIM-->F{{Aprovado}}
+E--NÃO-->G{{Reprovado}}
+F-->H([Fim])
+G-->H([Fim])
 ```
-
 #### Pseudocódigo (1 ponto)
-
 ```
-Algoritmo ContaAprovacoes
-FIM_ALGORITMO
+ALGORITMO
+DECLARE N1, N2, M NUMÉRICO 
+ESCREVA “Digite as duas notas” 
+LEIA N1, N2 
+M = (N1+N2)/2
+SE M >= 7
+	ENTÃO ESCREVA “Aprovado” 
+SENÃO  
+	ESCREVA “Reprovado“ 
+FIM_ALGORITMO.
 ```
 
 #### Teste de mesa (1 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| LEIA N1 | LEIA N2 | M = (N1+N2)/2 | SE M >= 7 | SAÍDA | 
+|      --  |      --   |      --    |      --   |      --      | 
+| 10       | 8          |9          |  V        | “Aprovado”   |
+| 5        | 3          | 4         | F         | “Reprovado“  |
+| 8        | 6          | 7         | V         | “Aprovado”  |
 
 ## Exercício 04 (3 pontos)
 Represente, em fluxograma e pseudocódigo, um algoritmo que, a partir da idade do candidato(a), determinar se pode ou não tirar a CNH. 
