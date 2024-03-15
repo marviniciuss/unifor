@@ -122,24 +122,71 @@ O algoritmo deve retornar o resultado da operação selecionada simulando todas 
 
 #### Fluxograma (1.0 ponto)
 
+### Exercício 3
+
+Receba dois números reais e um operador e efetue a operação correspondente com os valores recebidos (operandos). O algoritmo deve retornar o resultado da operação selecionada simulando todas as operações de uma calculadora simples.
+
+#### Fluxograma
+
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([Início])-->B{{"Digite o primeiro e o segundo número: "}}
+B-->C[/N1, N2/]
+C-->D{{"Digite o operador: "}}
+D-->E[/operador/]
+E-->F{"operador=="+""}
+F--SIM-->O[resultado=N1+N2]
+O-->M
+F--NÃO-->G{"operador=="-""}
+G--SIM-->P[resultado=N1-N2]
+P-->M
+G--NÃO-->H{"operador=="*""}
+H--SIM-->Q[resultado=N1*N2]
+Q-->M
+H-->I{"operador=="/""}
+I-->J{"N2==0"}
+J--SIM-->K{{"Não existe divisão por zero!"}}
+K-->N
+J--NÃO-->L[resultado=N1/N2]
+L-->M{{"O resultado da operação é: resultado"}}
+M-->N([FIM])
 ```
-
 #### Pseudocódigo (1.0 ponto)
-
 ```
-Algoritmo Calculadora
-FIM_ALGORITMO
+ALGORITMO calculadora
+DECLARE N1, N2, resultado: REAL
+		operador: CARACTERE
+INICIO
+ESCREVA "Digite o primeiro número: "
+LEIA N1
+ESCREVA "Digite o segundo número: "
+LEIA N2
+ESCREVA "Digite o operador: "
+LEIA operador
+ESCOLHA
+	CASO operador=="+"
+		resultado=N1+N2
+	CASO operador=="-"
+		resultado=N1-N2
+	CASO operador=="*"
+		resultado=N1*N2
+	CASO operador=="/"
+		SE N2==0 ENTÃO
+			ESCREVA "Não existe divisão por zero!"
+		SENÃO
+			resultado=N1/N2
+		FIM_SE
+FIM_ESCOLHA
+ESCREVA "O resultado da operação é: ", resultado
+FIM	
 ```
 
 #### Teste de mesa (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| LEIA N1 | LEIA N2 | LEIA operador | operador=="+"| operador=="-" | operador=="*" |operador=="/" | SAÍDA |
+|      --      |      --      |      --      |      --      |      --      |    --      |    --      |    --      | 
+| 5     | 1       | +    |  V     | F    |  F  |  F | "O resultado da operação é: 6"  |
+| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |    |   |   |
 
 ### Exercício 04 (2.5 pontos)
 Elaborar um algoritmo que, dada a idade, classifique nas categorias: infantil A (5 - 7 anos), infantil B (8 -10 anos), juvenil A (11 - 13 anos), juvenil B (14 -17 anos) e adulto (maiores que 18 anos).
