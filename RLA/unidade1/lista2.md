@@ -184,9 +184,10 @@ FIM
 #### Teste de mesa (0.5 ponto)
 
 | LEIA N1 | LEIA N2 | LEIA operador | operador=="+"| operador=="-" | operador=="*" |operador=="/" | SAÍDA |
-|      --      |      --      |      --      |      --      |      --      |    --      |    --      |    --      | 
-| 5     | 1       | +    |  V     | F    |  F  |  F | "O resultado da operação é: 6"  |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |    |   |   |
+|    --   |   --    |       --      |      --      |      --       |    --         |    --        |   --  | 
+| 5       | 1       | +             |        V     |          F    |            F  |            F | "O resultado da operação é: 6"  |
+| 4       | 2       |     *         |         F    |       F       |       V       |     F        |  "O resultado da operação é: 8" |
+| 5       |    0    |     /         |            F |            F  |            F  |            V |  "Não existe divisão por zero!" |
 
 ### Exercício 04 (2.5 pontos)
 Elaborar um algoritmo que, dada a idade, classifique nas categorias: infantil A (5 - 7 anos), infantil B (8 -10 anos), juvenil A (11 - 13 anos), juvenil B (14 -17 anos) e adulto (maiores que 18 anos).
