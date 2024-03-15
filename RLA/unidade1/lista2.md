@@ -90,22 +90,31 @@ Leia uma temperatura dada em Celsius (C) e imprima o equivalente em Fahrenheit (
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INÍCIO])-->B{{Informe a temperatura em Celsius}}
+B-->C[/TC, TF/]
+C-->D["TF = (9/5) * TC + 32"]
+D-->E{{A temperatura em Fahrenheit é TF}}
+E-->F([FIM])
 ```
-
 #### Pseudocódigo (1.0 ponto)
-
 ```
-Algoritmo ConverteCelsiusFarenheit
-FIM_ALGORITMO
+ALGORITMO converter_temperatura
+DECLARE TC, TF: REAL
+ESCREVA "Digite a temperatura em gaus Celsius: "
+LEIA TC
+TF = (9/5) * TC + 32
+ESCREVA "A temperatura em graus Fahrenheit é: ",TF
+FIM
 ```
 
 #### Teste de mesa (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| TC | TF = (9/5) * TC + 32 | SAÍDA | 
+|      --      |      --      |      --      | 
+| 30     | 86       | "A temperatura em graus Fahrenheit é: 86"    |  
+| 37   |     98.6   | "A temperatura em graus Fahrenheit é: 98.6"     | 
+| 18   | 64.4       | "A temperatura em graus Fahrenheit é: 64.4"     | 
+
 
 ### Exercício 03 (2.5 pontos)
 Receba dois números reais e um operador e efetue a operação correspondente com os valores recebidos (operandos). 
