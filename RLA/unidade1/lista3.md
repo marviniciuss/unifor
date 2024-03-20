@@ -101,22 +101,44 @@ Atualize o algoritmo para determinar se um número inteiro e positivo é par ou 
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([Início])-->B{{Digite um número}}
+B-->C[/Número/]
+C--> D{Número < 0}
+D--SIM-->E{{O número deve ser positivo!}}
+E-->B
+D--NÃO-->F{Número>=0}
+F-->G[resto = número % 2]
+G-->H{resto == 0}
+H--NÃO-->I{{O número é impar!}}
+I-->K
+H--SIM-->J{{O número é par!}}
+J-->K([FIM])
 ```
-
 #### Pseudocódigo (1.0 ponto)
-
 ```
-Algoritmo ClassificaCategoria
+ALGORITMO verifica_par_ímpar
+DECLARE numero, resto: INTEIRO
+ESCREVA "Digite um número positivo: "
+LEIA numero, resto
+ENQUANTO numero < 0 FAÇA
+    ESCREVA "Digite um número positivo: "
+    LEIA numero
+FIM_ENQUANTO
+resto = numero % 2
+    SE resto == 0 ENTAO
+       ESCREVA "O número é par"
+    SENÃO 
+       ESCREVA "O número é ímpar" 
 FIM_ALGORITMO
 ```
 
 #### Teste de mesa (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
+| LEIA numero | numero < 0 | resto = numero % 2 | resto == 0 | SAÍDA | 
 |      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| -4     | V       |    |       | "Digite um número positivo: "    |
+| 5   | F          | 1        | F | "O número é ímpar" |
+| 8   | F          | 0        | V | "O número é par"  |
 
 ### Exercício 02 (2.5 pontos)
 Faça um algoritmo que exiba na tela uma contagem de 0 até 30, exibindo apenas os múltiplos de 3.
