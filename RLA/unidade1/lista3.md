@@ -230,19 +230,43 @@ Ex. Foram lidas 14 notas. A média aritmética é 6.75!
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([Início])-->B[/N=0, media, soma, i=0/]
+B-->C{N >= 0}
+C--SIM-->D{{"Informe uma nota: "}}
+D-->E["soma=soma+N 
+i=i+1"]
+E-->C
+C--NÃO-->F[media=soma/i]
+F-->G{{"Foram lidas i notas. A média aritmética é: media!"}}
+G-->H([FIM])
 ```
-
 #### Pseudocódigo (1.0 ponto)
-
 ```
-Algoritmo ClassificaCategoria
+ALGORITMO numero_maior
+DECLARE N, media, soma: REAL
+		i: INTEIRO
+INICIO
+media=0
+i=0
+N=0
+ENQUANTO N>=0 FAÇA
+	ESCREVA "Informe uma nota: "
+	LEIA N
+	soma=soma+N
+	i=i+1
+FIM_ENQUANTO	
+media=soma/i
+ESCREVA "Foram lidas i notas. A média aritmética é: media!"
 FIM_ALGORITMO
 ```
 
 #### Teste de mesa (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| LEIA N |  N>=0 | soma=soma+N | i=i+1 | media=soma/i | SAÍDA | 
+|      --      |      --      |      --      |      --      |      --      | -- |
+| 5     |  V | 5       | 1    |       |     |
+| 2   | V    | 7        | 2 |   |  |
+| 3   | V          | 10        | 3 |   |  |
+| 0   | V          | 10        | 4 |   |  |
+| -2   | F          |        |  |  2.5 | "Foram lidas 4 notas. A média aritmética é: 2,5!"  |
+
