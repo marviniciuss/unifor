@@ -242,7 +242,8 @@ FIM
 
 #### Teste de mesa (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| LEIA idade | idade>=5 e idade<=7 | idade>=8 e idade<=10 | idade>=11 e idade<=13 | idade>=14 e idade<=17 |  idade>=18  | SAÍDA |
+|      --      |      --      |      --      |      --      |      --      |    --  |  --    |
+| 5     |   V     |    F    |     F    |    F    |      F    |  Categoria infantil A    |
+| 15   |     F    |      F   | F |  V |    F    |   Categoria juvenil B     |
+| 27   |    F     |    F     | F | F  |    V    |   Categoria adulto     |
