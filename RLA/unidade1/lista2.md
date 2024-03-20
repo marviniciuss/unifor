@@ -196,14 +196,48 @@ Elaborar um algoritmo que, dada a idade, classifique nas categorias: infantil A 
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INÍCIO])-->B{{"Informe a idade: "}}
+B-->C[/idade/]
+C-->F{idade>=5 e idade<=7}
+F--SIM-->G{{Categoria infantil A }}
+G-->Q
+F--NÃO-->H{idade>=8 e idade<=10}
+H--SIM-->I{{Categoria infantil B }}
+I-->Q
+H--NÃO-->J{idade>=11 e idade<=13}
+J--SIM-->K{{Categoria juvenil A }}
+K-->Q
+J--NÃO-->L{idade>=14 e idade<=17}
+L--SIM-->M{{Categoria juvenil B }}
+M-->Q
+L--NÃO-->O{idade>=18}
+O--SIM-->P{{Categoria adulto }}
+P-->Q([FIM])
+
 ```
 
 #### Pseudocódigo (1.0 ponto)
-
 ```
-Algoritmo ClassificaCategoria
-FIM_ALGORITMO
+ALGORITMO categoria_idade
+VAR idade: INTEIRO
+INICIO
+ESCREVA "Informe a idade: "
+LEIA idade
+SE idade>=5 e idade<=7 ENTÃO
+	ESCREVA "Categoria infantil A"
+FIM_SE
+SE idade>=8 e idade<=10 ENTÃO
+	ESCREVA "Categoria infantil B"
+FIM_SE
+SE idade>=11 e idade<=13 ENTÃO
+	ESCREVA "Categoria juvenil A"
+FIM_SE
+SE idade>=14 e idade<=17 ENTÃO
+	ESCREVA "Categoria juvenil B"
+FIM_SE
+SE idade>=18 ENTÃO
+	ESCREVA "Categoria adulto"
+FIM
 ```
 
 #### Teste de mesa (0.5 ponto)
