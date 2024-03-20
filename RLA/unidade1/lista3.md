@@ -147,22 +147,35 @@ Faça um algoritmo que exiba na tela uma contagem de 0 até 30, exibindo apenas 
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
-```
+A([Início])-->B[/i/]
+B-->C[i DE 0 ATÉ 30 PASSO 3]
+C-->E
+C--> D{{"Multiplos de 3: i"}}
+D-->C
+D-->E([FIM])
 
+```
 #### Pseudocódigo (1.0 ponto)
-
 ```
-Algoritmo ClassificaCategoria
+ALGORITMO multiplos_3
+DECLARE i: INTEIRO
+INICIO
+PARA I=0 ATÉ 30 FAÇA [PASSO 3]
+	ESCREVA "Multiplos de 3: ",i 
 FIM_ALGORITMO
 ```
 
 #### Teste de mesa (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| Valor de i | Saída | 
+|      --    |  --      |      
+| 0     |        | 
+| 1   |           | 
+| 2   |           | 
+| 3   | "Multiplos de 3: ",  3 | 
+| 4   |           | 
+| 5   |           | 
+| 6   | "Multiplos de 3: ",  6 | 
 
 ### Exercício 03 (2.5 pontos)
 Dada uma sequência de números inteiros, calcular a sua soma. 
