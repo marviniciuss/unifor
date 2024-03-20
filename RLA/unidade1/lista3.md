@@ -176,6 +176,10 @@ FIM_ALGORITMO
 | 4   |           | 
 | 5   |           | 
 | 6   | "Multiplos de 3: ",  6 | 
+| 7   |           | 
+| 8   |           | 
+| 9   | "Multiplos de 3: ",  9 | 
+
 
 ### Exercício 03 (2.5 pontos)
 Dada uma sequência de números inteiros, calcular a sua soma. 
@@ -185,22 +189,37 @@ Por exemplo, para a sequência {12, 17, 4, -6, 8, 0}, o seu programa deve escrev
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B([FIM])
+A([INICIO]) --> B[/N, S=0, i/]
+B-->C{{"Informe o tamanho da sequência numérica: "}}
+C-->D[DE 0 ATÉ i]
+D-->E{{"Informe um número: "}}
+E-->F[S=S+N]
+F-->G{{"A soma dos números informados é: ", S}}
+G-->D
+E-->H([FIM])
 ```
-
 #### Pseudocódigo (1.0 ponto)
-
 ```
-Algoritmo ClassificaCategoria
+Algoritmo Soma_sequencia
+DECLARE N, S=0, i: INTEIRO
+INICIO
+ESCREVA "Informe o tamanho da sequência numérica: "
+LEIA i
+PARA 0 ATÉ i FAÇA 
+	ESCREVA "Informe um número: "
+	LEIA N
+	S=S+N
+	ESCREVER "A soma dos números informados é: ", S
+FIM_PARA
 FIM_ALGORITMO
 ```
 
 #### Teste de mesa (0.5 ponto)
 
-| nome_coluna1 | nome_coluna2 | nome_coluna3 | nome_coluna4 | nome_coluna5 | 
-|      --      |      --      |      --      |      --      |      --      | 
-| Adicione     | espaço       | se quiser    |  alinhar     | as barras    |
-| verticais,   | mas          | não é        | obrigatório. | Entendido ?  |
+| LEIA i | PARA 0 ATÉ i FAÇA | S=S+N | SAÍDA | 
+|      --      |      --      |      --      |      --      |     
+| 5     | 3,5,-1,0,2       | 9    |  "A soma dos números informados é: ", 9     | 
+| 3  | -3, 10, 4         | 11        | "A soma dos números informados é: ", 11 | 
 
 ### Exercício 04 (2.5 pontos)
 Escreva um programa que leia a nota de diversos alunos, até que seja digitada uma nota negativa. 
