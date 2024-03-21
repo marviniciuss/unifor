@@ -358,7 +358,7 @@ SE n<0 ENTÃO
 ESCREVA "O valor deve ser maior ou igual a zero!"
 SENÃO
 	fator=1
-	PARA i=0 ATÉ n FAÇA
+	PARA i=1 ATÉ n FAÇA
 	fator = fator * i
 	FIM_PARA
 ESCREVA "O fatorial de, n, é:, fator"
