@@ -466,7 +466,20 @@ E --> W
 
 ```
 Algoritmo InverteInteiro
+DECLARE num, num_inv, digito, numero : INTEIRO
 INICIO
+ESCREVA "Digite um número inteiro: "
+LEIA num
+SE num>=0 ENTÃO
+	num_inv=0
+	digito = num % 10                  //O operador %, chamado de "operador módulo" ou "operador de resto", retorna o resto da divisão de dois números. Neste algoritmo, retorna o último dígito do número.
+	num_inv = num_inv * 10 + digito    // Tem como objetivo adicionar o dígito isolado do número original ao número invertido. Ex: 5432, então numeroInvertido * 10 resultaria em 54320. Se dígito for, por exemplo, 5, então 54320 + 5 resultaria em 54325.
+	numero = numero // 10             //É responsável por remover o último dígito do número original após ele ter sido processado e adicionado ao número invertido. Como estamos lidando com números inteiros, qualquer parte decimal é truncada, o que significa que apenas a parte inteira é mantida. 
+
+
+SENÃO
+ESCREVA "O número deve ser positivo!"
+
 ...
 FIM
 ```
