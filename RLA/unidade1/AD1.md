@@ -83,8 +83,7 @@ a=b
 b=aux
 ESCREVA "a= "a
 ESCREVA "b= "b
-...
-FIM
+FIM_ALGORITMO
 ```
 
 #### Teste de mesa
@@ -152,8 +151,19 @@ J --LOOP--> E
 ```
 Algoritmo ContaAprovacoes
 INICIO
-...
-FIM
+DECLARE N, cont: INTEIRO
+        nota: REAL
+ESCREVA "Digite o número de notas: "
+LEIA N
+PARA i=0 ATÉ N FAÇA
+ESCREVA "Digite nota, i"
+LEIA nota
+    SE nota>=50 && nota <=100 ENTÃO
+        cont=cont+1
+    FIM_SE
+FIM_PARA
+ESCREVA "O número de aprovações é: cont"      
+FIM_ALGORITMO
 ```
 
 #### Teste de mesa 01
