@@ -223,10 +223,22 @@ K --LOOP--> G
 #### Pseudocódigo (1 ponto)
 
 ```
-Algoritmo SomaNumeros
+ALGORITMO numero_maior
+DECLARE N, media, soma: REAL
+		i: INTEIRO
 INICIO
-...
-FIM
+media=0
+i=0
+N=0
+ENQUANTO N>=0 FAÇA
+	ESCREVA "Informe uma nota: "
+	LEIA N
+	soma=soma+N
+	i=i+1
+FIM_ENQUANTO	
+media=soma/i
+ESCREVA "Foram lidas i notas. A média aritmética é: media!"
+FIM_ALGORITMO
 ```
 
 #### Teste de mesa
