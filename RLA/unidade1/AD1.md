@@ -402,14 +402,22 @@ G --> H[a = b]
 H --> I[b = termo_atual]
 I --LOOP--> E 
 ```
-
 #### Pseudocódigo (2 pontos)
-
 ```
 Algoritmo GeraFibonacci
 INICIO
-...
-FIM
+DECLARE a, b, n, termo_atual: INTEIRO
+ESCREVA "Número de termos da série Fibonacci: "
+LEIA n
+a=0
+b=1
+PARA i=1 ATÉ n FAÇA
+	termo_atual=a*b
+	a=b
+	b=termo_atual
+	ESCREVA "a"    // A escolha do a se deu para que imprimisse somente até a quantidade de números solicitados. Se imprimisse o b seriam n+1 números da série Fibonacci.
+FIM_PARA
+FIM_ALGORITMO
 ```
 #### Teste de mesa
 
