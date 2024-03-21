@@ -294,8 +294,16 @@ I --LOOP--> E
 ```
 Algoritmo SomaSerie
 INICIO
-...
-FIM
+DECLARE n, numerador, denominador : INTEIRO
+	S=0, termo : REAL
+PARA i=0 ATÉ n FAÇA
+numerador = 2 * i + 1
+denominador = 2 * i + 2
+termo = numerador / denominador
+S = S + termo
+FIM_PARA
+ESCREVA "Soma da série S é ", S
+FIM_ALGORITMO 
 ```
 
 #### Teste de mesa (0.25 ponto)
