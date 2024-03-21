@@ -332,7 +332,7 @@ Dado um número $n$, implemente e teste um algoritmo para calcular o fatorial de
 
 ```mermaid
 flowchart TD
-A([INICIO]) --> B{{"Digite um numero inteiro nao-negativo:"}}
+A([INICIO]) --> B{{"0Digite um numero inteiro nao-negativo:"}}
 B --> C[/n/]
 C --> D{n >= 0}
 D --TRUE--> E[fator = 1]
@@ -350,6 +350,19 @@ H --> I
 ```
 Algoritmo CalcFatorial
 INICIO
+DECLARE n, fator : INTEIRO
+ESCREVA "Digite um numero inteiro nao-negativo: "
+LEIA n
+SE n<0 ENTÃO
+ESCREVA "O valor deve ser maior ou igual a zero!"
+SENÃO
+	fator=1
+	PARA i=0 ATÉ n FAÇA
+	
+
+
+
+
 ...
 FIM
 ```
