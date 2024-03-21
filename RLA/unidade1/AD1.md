@@ -355,12 +355,13 @@ DECLARE n, fator : INTEIRO
 ESCREVA "Digite um numero inteiro nao-negativo: "
 LEIA n
 SE n<0 ENTÃO
-ESCREVA "O valor deve ser maior ou igual a zero!"
+	ESCREVA "O valor deve ser maior ou igual a zero!"
 SENÃO
 	fator=1
 	PARA i=1 ATÉ n FAÇA
 	fator = fator * i
 	FIM_PARA
+FIM_SE
 ESCREVA "O fatorial de, n, é:, fator"
 FIM_ALGORITMO
 ```
