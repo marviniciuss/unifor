@@ -223,21 +223,24 @@ K --LOOP--> G
 #### Pseudocódigo (1 ponto)
 
 ```
-ALGORITMO numero_maior
-DECLARE N, media, soma: REAL
-		i: INTEIRO
+ALGORITMO soma_numeros
+DECLARE N, soma, num: REAL
+	i: INTEIRO
 INICIO
-media=0
-i=0
-N=0
-ENQUANTO N>=0 FAÇA
-	ESCREVA "Informe uma nota: "
-	LEIA N
-	soma=soma+N
-	i=i+1
-FIM_ENQUANTO	
-media=soma/i
-ESCREVA "Foram lidas i notas. A média aritmética é: media!"
+ESCREVA "Digite a quantidade de números: "
+LEIA N
+SE N<0 ENTÃO
+	ESCREVA "O valor deve ser maior ou igual a zero!"
+SENÃO
+	i=0
+	soma=0
+	ENQUANTO i<=N FAÇA
+		ESCREVA "Digite um número: "
+		LEIA num
+		soma=soma+num
+		i=i+1
+	FIM_ENQUANTO	
+ESCREVA "A soma dos numeros é , soma"
 FIM_ALGORITMO
 ```
 
