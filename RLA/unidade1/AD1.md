@@ -240,6 +240,7 @@ SENÃO
 		soma=soma+num
 		i=i+1
 	FIM_ENQUANTO	
+FIM_SE
 ESCREVA "A soma dos numeros é , soma"
 FIM_ALGORITMO
 ```
