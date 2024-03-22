@@ -1,5 +1,9 @@
 #include<stdio.h>
 
+//Questão 3 - Soma de um conjunto de números. 
+//Dado um conjunto de números, implemente e teste um algoritmo para calcular a soma desses números.
+//Aceite apenas maior ou igual a zero.
+
 int main() {
 float N1, soma, num;
 int i;
